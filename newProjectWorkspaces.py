@@ -23,7 +23,7 @@ def main(projectName):
     
         i3.workspace(projectName + '-' + output['name'])
 
-    subprocess.call(['doing', 'now', projectName])
+    subprocess.call(['startWorkOn', projectName])
     
 if __name__=="__main__":
     if (len(sys.argv) > 1):
