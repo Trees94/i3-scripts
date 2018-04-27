@@ -7,7 +7,7 @@ import i3
 import newProjectWorkspaces
 import constants
 
-subprocess.Popen(['xterm', '-e', constants.SCRIPT_DIR + 'listProjectWorkspaces.py | ' + constants.HOME_DIR + '.fzf/bin/fzf | xargs -0 ' + constants.SCRIPT_DIR + 'newProjectWorkspaces.py'])
+subprocess.Popen(['xterm', '-e', constants.SCRIPTS_DIR + 'listProjectWorkspaces.py | ' + constants.HOME_DIR + '.fzf/bin/fzf | xargs -0 ' + constants.SCRIPTS_DIR + 'newProjectWorkspaces.py'])
 
 names = list(set(map(lambda x: x['name'].split("-")[0], i3.get_workspaces())))
 for name in names:
